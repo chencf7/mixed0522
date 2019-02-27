@@ -1,0 +1,212 @@
+body{
+    overflow-x: hidden;
+}
+.navbar{ border-radius: 0; }
+.assess-row{ margin-bottom: 15px; }
+.layui-form input[type=checkbox],
+.layui-form input[type=radio] {
+    display: none;
+}
+input[type="radio"]:checked + label span {
+    background-color: #72a4e9;
+}
+
+input[type="radio"]:checked + label span::after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    width: 8px;
+    height: 16px;
+    border: 1px solid #72a4e9;
+    border-top: none;
+    border-left: none;
+    transform:rotate(40deg);
+    -ms-transform:rotate(40deg);
+    -moz-transform:rotate(40deg);
+    -webkit-transform:rotate(40deg);
+}
+
+input[type="checkbox"]:checked + span{
+    background-color: #72a4e9;
+}
+
+input[type="checkbox"]:checked + span::after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    width: 8px;
+    height: 16px;
+    border: 1px solid #72a4e9;
+    border-top: none;
+    border-left: none;
+    transform:rotate(40deg);
+    -ms-transform:rotate(40deg);
+    -moz-transform:rotate(40deg);
+    -webkit-transform:rotate(40deg);
+}
+
+.layui-form-label {
+    float: left;
+    display: block;
+    padding: 0 15px;
+    font-weight: 400;
+    height: 28px;
+    line-height: 28px;
+    text-align: right;
+}
+.layui-input-block{display: flex;}
+.layui-form-checkbox {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    padding-right: 30px;
+    cursor: pointer;
+    font-size: 0;
+    -webkit-transition: .1s linear;
+    transition: .1s linear;
+    box-sizing: border-box;
+}
+.layui-form-checkbox span {
+    padding: 0 10px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    border-radius: 2px 0 0 2px;
+    background-color: #d2d2d2;
+    color: #fff;
+    overflow: hidden;
+    display: block;
+}
+.layui-form-checkbox i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 28px;
+    border: 1px solid #d2d2d2;
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.layui-form-checked span {
+    background-color: #72a4e9;
+}
+
+.assess-addon {
+    padding: 6px 6px 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-right: 10px;
+}
+.assess-descript{
+    height: 95%;
+    border-left: 1px solid #ccc;
+}
+.assess-header{
+    margin-bottom: 15px;
+}
+.assess-label{
+    font-size: 14px;
+    font-weight: bolder;
+}
+.assess-body{}
+.assess-body ul{
+    padding-inline-start: 0;
+}
+.assess-body ul>li{
+    list-style-type: none;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    border-left: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    display: flex;
+}
+.assess-content{}
+.assess-content span{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    border: 1px solid #aecffd;
+    border-left: 30px solid #aecffd;
+    border-radius: 6px;
+    padding-left: 5px;
+    color: #72a4e9;
+}
+/*absolute高度比relative要高，原因absolute定位于父元素，可通过父元素的高度来计算*/
+.assess-content span::before{
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 0;
+    height: 28px;
+    border-left: 1px solid #eee;
+}
+
+.assess-top3{
+    border-left: 30px solid #72a4e9 !important;
+    color: #fff !important;
+    background: #82aff1;
+}
+
+.layui-table{
+    width: 100%;
+    border: 1px solid #e6e6e6;
+}
+.layui-table thead tr{
+    background-color: #f2f2f2;
+}
+.layui-table tr:nth-child(even){
+    background-color: rgba(174,207,253,0.3);
+}
+.layui-table tr td[rowspan]{
+    background-color: #ffffff;
+}
+.layui-table td, .layui-table th {
+    position: relative;
+    min-height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
+}
+.layui-table th{
+    padding: 9px 15px;
+}
+.layui-table td{
+    padding: 5px 15px;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:hover {
+    background-color: #72a4e9;
+    border-color: #72a4e9;
+}
+
+
+
+/*#descript{*/
+    /*animation: proRotate 1s ease-in-out 500ms alternate none 1;*/
+    /*-webkit-animation: proRotate 1s ease-in-out 500ms alternate none 1;*/
+/*}*/
+@keyframes proRotate {
+    0%{transform:perspective(800px) rotateY(180deg);}
+    100%{transform:perspective(800px) rotateY(0deg);}
+}
+@-webkit-keyframes proRotate {
+    0%{-webkit-transform:perspective(800px) rotateY(180deg);}
+    100%{-webkit-transform:perspective(800px) rotateY(0deg);}
+}
+
